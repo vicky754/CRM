@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='container'>
+<form method='GET'>
+  {% csrf_token %}
+  <div class="form-group col-6">
+    <label for="exampleInputEmail1">Add Your Group Name Here</label>
+    <input type="text" class="form-control" name='name' id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your info with anyone else.</small>
+    <button type='submit'>Submit</button>
+    <a href='/get/'>Back to Rooms</a>
+  </div>
+
+  <!--<a class='btn btn-info' href='/get/'>CREATE ROOM</a>-->
+</form>
+</div>
+<h1>{{api2.title|upper}} is created...</h1>
+
+{% endblock %}

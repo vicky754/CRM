@@ -1,0 +1,33 @@
+
+
+
+{% extends 'dnaclogin.html' %}
+{% block content %}
+
+<h1>DNAC Network Health</h1>
+
+
+<div class='container'>
+<table class="table border mt-5">
+    <thead class="bg-primary">
+      <tr>
+        <th scope="col">identitySource</th>
+        <th scope="col">name</th>
+    
+      </tr>
+    </thead>
+    <tbody>
+        
+{% for i in get.response %}
+      <tr>
+        
+        <td>{{i.identitySource.type}}</td>
+        <td>{{i.name}}</td>
+      </tr>
+      {% endfor %}
+     </tbody>
+    </table>
+    </div>
+
+
+{% endblock %}
